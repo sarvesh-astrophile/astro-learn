@@ -40,7 +40,7 @@ All commands are run from the root of the project, from a terminal:
 
 ## 🚀 Deployment to Vercel
 
-This project is configured for seamless deployment to Vercel. The `vercel.json` file contains all necessary configurations for SSR deployment.
+This project is configured for seamless deployment to Vercel with automatic framework detection.
 
 ### Steps to Deploy:
 
@@ -53,20 +53,25 @@ This project is configured for seamless deployment to Vercel. The `vercel.json` 
    - Connect your GitHub repository to Vercel, or
    - Use Vercel CLI: `vercel`
 
-3. **Build Configuration**:
+3. **Automatic Configuration**:
+   Vercel will automatically detect your Astro framework and configure:
    - **Build Command**: `npm run build`
    - **Output Directory**: `dist`
-   - **Node.js Runtime**: 20.x
+   - **Serverless Functions**: For SSR routes
+   - **Static Assets**: Optimized delivery
 
 ### Key Features:
 - ✅ Server-Side Rendering (SSR) support
-- ✅ Automatic static asset optimization
-- ✅ Security headers configured
-- ✅ Node.js 20.x runtime
+- ✅ Automatic framework detection
+- ✅ Optimized static asset delivery
+- ✅ Serverless function deployment
 - ✅ TailwindCSS integration
 
 ### Environment Variables:
 Add any environment variables in your Vercel dashboard under Project Settings > Environment Variables.
+
+### Troubleshooting:
+If you encounter deployment issues, Vercel will automatically detect the framework. The minimal `vercel.json` configuration ensures compatibility with Vercel's built-in Astro support.
 
 ## 👀 Want to learn more?
 
